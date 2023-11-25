@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "target": "ES2020",
+      "module": "commonjs",
+      "outDir": "./js", 
+      "rootDir": "./",
+      "strict": true,
+      "esModuleInterop": true
+    },
+    "include": [
+        "*.ts"
+, "utils/claimer.ts", "utils/getamount.ts", "utils/getproof.ts", "utils/loaddata.ts", "utils/parsecsv.ts", "utils/parselog.ts", "utils/swap.ts", "utils/test.ts", "utils/testclaim.ts", "utils/getargs.ts", "utils/getproof_work_out.ts"    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }

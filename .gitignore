@@ -1,0 +1,33 @@
+# Private files
+*addresses_*
+logs.log
+tx_data/
+result.csv
+proofs.txt
+proofs_.txt
+get_proofs.json
+addresses.txt
+addresses_*.txt
+seeds.txt
+private_keys.txt
+proxies.txt
+rpcs.txt
+.env
+# Compilled js
+*.js
+!_*.js
+# Dependency directories
+node_modules/
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+#Testing ts-files
+testclaim.ts
+getargs.ts
+test.ts
+getproof_work_out.ts
+json_test.ts
+loaddata.ts

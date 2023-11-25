@@ -1,0 +1,34 @@
+{
+  "name": "zkpepe-claimer",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of zkpepe's claimer via merkle-proof getting back-end zkpepe.com",
+  "start": "main.js",
+  "proof": "utils/getproof.js",
+  "amount": "utils/getamount.js",
+  "parsecsv": "utils/parsecsv.js",
+  "createjson": "utils/parselog.js",
+  "claim": "utils/claimer.js",
+  "swap": "utils/swap.js",
+  "author": "https://github.com/whonion",
+  "scripts": {
+    "start": "ts-node main.ts",
+    "proof": "ts-node utils/getproof.ts",
+    "amount": "ts-node utils/getamount.ts",
+    "parsecsv": "ts-node utils/parsecsv.ts",
+    "createjson ": "ts-node utils/parselog.ts",
+    "claim": "ts-node utils/claimer.ts",
+    "swap": "ts-node utils/swap.ts"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.0",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "log4js": "^6.9.1",
+    "ts-node": "^10.9.1",
+    "viem": "^1.19.9"
+  },
+  "devDependencies": {
+    "@types/node": "^20.6.1"
+  }
+}
