@@ -83,11 +83,12 @@ export async function sendClaimTransactions() {
       const proofStringArray = proof.map(item => ethers.utils.hexlify(item));
 
       const amountBN = ethers.utils.parseEther(amount.toString());
-      const gasLimit = 600000; // Set an appropriate gas limit
+      const gasLimit = 800000; // Set an appropriate gas limit
 
       const contract = new ethers.Contract(contractAddress, contractABI, wallet);
       const tx = await contract.claim(proofStringArray, amountBN, {
         gasLimit: gasLimit,
+        gasPrice: 250000000,
       });
 
       try {
@@ -95,20 +96,21 @@ export async function sendClaimTransactions() {
 
         if (receipt.status === 1) {
           console.log(`✅ Claim transaction successful for address: ${address}`);
-          console.log(`View on Blockchain explorer: ${exp_url}${exp_url}${tx.hash}`);
+          console.log(`View on Blockchain explorer: ${exp_url}${tx.hash}`);
           logger.info(`Claim transaction successful for address: ${address}. Transaction Hash: ${exp_url}${tx.hash}`);
         } else {
           console.log(`❌ Claim transaction failed for address: ${address}`);
           logger.error(`Claim transaction failed for address: ${address}. Transaction Hash: ${exp_url}${tx.hash}`);
         }
       } catch (error: any) {
-        console.error(`❌ Error processing claim transactions for address ${address}:`, error.message);
+        console.error(`❌ Error processing claim transactions for address: ${address}`);
+        console.log(`View on Blockchain explorer: ${exp_url}${tx.hash}`);
         logger.error(`Error processing claim transactions for address ${address}: ${error.message}`);
       }
     }
   } catch (error: any) {
-    console.error('❌ Error processing claim transactions:', error.message);
-    logger.error(`Error processing claim transactions: ${error.message}`);
+    console.error('❌ Error processing claim transactions:\n', error.message);
+    //logger.error(`Error processing claim transactions: ${error.message}`);
   }
 }
 

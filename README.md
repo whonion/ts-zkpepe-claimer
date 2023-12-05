@@ -3,7 +3,7 @@
 ![ts-zkpepe-claimer](https://www.zksyncpepe.com/assets/pic1.5fa188ad.png)<br>
 ### Preview VS Code
 ![Preview VS Code](https://github.com/whonion/ts-zkpepe-claimer/blob/main/.github/preview.gif?raw=true)<br>
-### TypeScript impelementation of zkpepe's claimer via merkle-proof getting back-end [zkpepe.com](https://www.zksyncpepe.com/airdrop)
+### TypeScript impelementation of zkpepe's claimer via merkle-proof getting back-end [zksyncpepe.com](https://www.zksyncpepe.com/airdrop)
 
 ### Install `Node.js`
 ```sh
@@ -40,10 +40,10 @@ npm i -g ts-node
  - `claimer.ts` - The module for claiming tokens from a token distributor contract;
  - `swap.ts` - The module for quick sales claimed tokens;
 ### Required actions:
+ - rename `env.example` to `.env` and add `<TOKEN_CLAIMER_VIA_MERKLE_PROOF_ADDRESS>`;
  - rename `data/addresses.txt.example` to `data/addresses.txt` and add your eligible addresses;
  - rename `data/rpcs.txt.example` to `data/rpcs.txt` and add your private instant rpc zkSync Era;
  - rename `data/private_keys.txt.example` to `data/private_keys.txt` and add the corresponding `addresses.txt` private keys;
- - rename `data/proxies.txt.example` to `data/proxies.txt` and add your private proxies in format `IP:PORT:login:password`;
 ## Run Script
 ```sh
 npm run start
